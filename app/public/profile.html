@@ -47,7 +47,12 @@
 <h4> Email: <a v-bind:href="'mailto:' + userEmail"> {{userEmail}}</a></h4>
 <h4> Age: {{userAge}} </h4>
 <h4> Birthdate: {{userDOB}} </h4>
-<h4> Birthdate: {{userCountry}} </h4>
+<h4> Country: {{userCountry}} </h4>
+<div id = "refresh">
+<form v-on:submit.prevent="fetchuser">
+<button type ="submit" class= "btn btn-primary">Refresh User</button>
+</form>
+</div>
 </div>
 </div>
 
