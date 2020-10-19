@@ -1,0 +1,14 @@
+{
+    "name": "iu-msis/2-simple-docker-js-pwalkey",
+    "description": "An in-class example project",
+    "license": "private",
+    "authors": [{
+        "name": "Parker Walkey"
+    }],
+    "require": {
+      "ramsey/uuid": "^4.1"
+    },
+    "autoload": {
+        "classmap": ["class/DbConnection.php"]
+    }
+}
