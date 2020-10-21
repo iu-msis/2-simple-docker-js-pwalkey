@@ -13,6 +13,7 @@ if (isset($_GET['id'])) {
   // This is an example of a parameterized query
   $sql = 'SELECT * FROM comments WHERE id = ?';
   $vars = [ $_GET['id'] ];
+  $vars = [ $_GET['commentText'] ];
 }
 
 $stmt = $db->prepare($sql);

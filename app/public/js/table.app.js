@@ -1,18 +1,18 @@
-table = new Vue({
-  el: '#commentapp',
+commentTable = new Vue({
+  el: '#commentTable',
   data:{
     comment: [{
       id: '',
       commentText: ''
     }],
       newComment: {
-       id: '',
-       commentText: ''
+        id: '',
+        commentText: ''
      }
    },
   methods:{
     fetchcomments(){
-      fetch('api/comments/')
+      fetch('api/comments/index.php')
       .then(response => response.json())
       .then(json => {
         this.comment=json;

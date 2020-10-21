@@ -35,7 +35,8 @@
     <div class="row" id="commentapp">
       <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
         <div class="comments" v-for="c in comment">
-          <table class="table">
+          <table class="table" id='commentTable'>
+            <tbody id="commentTableBody">
           <tr>
           <th>id</th>
           <th>comment</th>
@@ -44,13 +45,14 @@
           <td><span class="id"> {{comment.id}} </span><br></td>
           <td><span class="commentText"> {{comment.commentText}}</span></td>
         </tr>
+            </tbody>
         </table>
         </div>
       </div>
   </br>
   </div>
-    <form v-on:submit.prevent="createComment()">
-      <div class="comments">
+    <form v-on:submit.prevent="createComment()" id='newCommentForm'>
+      <div class="commentapp">
         <label for="addcomment">Add Comment: </label>
         <input type="text" v-model="newComment.commentText" class="form-control" id="commentText" placeholder="Comment here"> </br>
         <input type="submit" value="Create Comment" class="btn-primary">
@@ -66,5 +68,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="js/table.app.js"></script>
   </body>
 </html>
