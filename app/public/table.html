@@ -42,8 +42,8 @@
           <th>comment</th>
         </tr>
         <tr>
-          <td><span class="id"> {{comment.id}} </span><br></td>
-          <td><span class="commentText"> {{comment.commentText}}</span></td>
+          <td><span class="id"> {{comments.id}} </span><br></td>
+          <td><span class="commentText"> {{comments.commentText}}</span></td>
         </tr>
             </tbody>
         </table>
@@ -51,8 +51,8 @@
       </div>
   </br>
   </div>
-    <form v-on:submit.prevent="createComment()" id='newCommentForm'>
-      <div class="commentapp">
+    <form v-on:submit.prevent="createComments()" id='CommentForm'>
+      <div class="commentForm">
         <label for="addcomment">Add Comment: </label>
         <input type="text" v-model="newComment.commentText" class="form-control" id="commentText" placeholder="Comment here"> </br>
         <input type="submit" value="Create Comment" class="btn-primary">
@@ -69,5 +69,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script src="js/table.app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   </body>
 </html>
