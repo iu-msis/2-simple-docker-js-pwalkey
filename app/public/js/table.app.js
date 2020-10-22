@@ -7,7 +7,7 @@ var table = new Vue({
       fetch('api/comments/index.php')
       .then(response => response.json())
       .then(json => {
-        this.comment=json;
+        this.comments=json;
         console.log(this.newComment)}
       );
     }
