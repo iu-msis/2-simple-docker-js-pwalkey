@@ -39,10 +39,10 @@ var form = new Vue ({
         console.log(this.newComment);
         },
         newCommentData() {
-        return {
-          id: '',
-          commentText: ''
-        };
-      }
+      return {
+        id: '',
+        commentText: ''
+      };
     }
+  }
 })

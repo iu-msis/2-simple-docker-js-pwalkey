@@ -33,7 +33,7 @@
   <div class="container-fluid">
     <div class="row" id="commentapp">
       <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-        <div class="comments" v-for="c in comments">
+        <form v-for="c in comments" v-bind:value="comments.id">
           <table class="table" id='commentTable'>
             <tbody id="commentTableBody">
           <tr>
@@ -46,17 +46,18 @@
         </tr>
             </tbody>
         </table>
+      </form>
         </div>
       </div>
   </br>
   </div>
+  <div class="commentForm">
     <form v-on:submit.prevent="createComments()" id='CommentForm'>
-      <div class="commentForm">
         <label for="addcomment">Add Comment: </label>
         <input type="text" v-model="newComment.commentText" class="form-control" id="commentText" placeholder="Comment here"> </br>
         <input type="submit" value="Create Comment" class="btn-primary">
-      </div>
       </form>
+      </div>
     </div>
 
 
